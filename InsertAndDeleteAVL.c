@@ -21,31 +21,12 @@ int main()
 {
 	Node* root = NULL;
 	root = insert(root, 10);
-	preorder(root);
-	printf("\n");
-
 	root = insert(root, 20); 
-	printf("\n");
-	preorder(root);
-	printf("\n");
-
-	
 	root = insert(root, 30);
-	preorder(root);
-	printf("\n");
-
-
 	root = insert(root, 40);
-	preorder(root);
-	printf("\n");
-
 	root = insert(root, 50);
-	preorder(root);
-
 	root = insert(root, 25);
 	preorder(root);
-	printf("\n");
-
 	return 0;
 }
 int height(Node* root)
@@ -72,12 +53,10 @@ Node* leftRot(Node* T)
 }
 Node* rebalance_right(Node* root)
 {
-	printf("REBALANCE RIGHT %d\n", root);
 	Node* l = root->left;
 	Node* r = root->right;
-	printf("L:%d R: %d\n", l,r);
-	int hl = height(l);
 	int hr = height(r);
+	int hl = height(l);
 	if(hr>hl+1)
 	{
 		if(height(r->left) < height(r->right))	//right-right condition
@@ -114,7 +93,6 @@ Node* rebalance_left(Node* root)
 }
 Node* insert(Node* root, int key)
 { 				  						
-	printf("ROOT IN INSERT: %d\n", root);
 	if(root==NULL)
 		root =  leaf(root,key);
 	else
@@ -124,7 +102,6 @@ Node* insert(Node* root, int key)
 		{
 			root->right = insert(root->right, key);
 			root->height = max(height(root->left), height(root->right))+1;
-			printf("ROOT HEIGHT: %d\n", height(root));
 			root = rebalance_right(root);
 		}
 		else if(r==0)
