@@ -93,7 +93,7 @@ void getMinimumPenalty(char gene1[], char gene2[], int misMatchPenalty,
 				penalty = misMatchPenalty;	//if the two mismatch
 
 			DP[i][j] = MIN(DP[i+1][j+1] + penalty, MIN(DP[i][j+1] + 2, DP[i+1][j]+2));	//if the minimum is obtained when we replace a gap, 
-																						//instead of taking the misMatch Penanlty
+													//instead of taking the misMatch Penalty
 		}
 	}
 	return;
