@@ -1,0 +1,24 @@
+4
+AY
+AYAD
+EGIDAB
+EGKID
+MORLA
+RITK
+TALINP
+TIR
+Corrections for the route "TALNP": TALNP
+Searching for the route TALNP : Not Found
+
+Alternate Route Suggestion:
+Rule 1: TALINP 
+Rule 2: 
+Corrections for the route "MORLA": MORLA
+Searching for the route MORLA : Found
+
+Corrections for the route "EEGKIDP": EGKIDP
+Searching for the route EGKIDP : Not Found
+
+Alternate Route Suggestion:
+Rule 1: 
+Rule 2: EGKID 
